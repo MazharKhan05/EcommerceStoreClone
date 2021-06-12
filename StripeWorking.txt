@@ -1,0 +1,17 @@
+Stripe checkout Functionality
+
+1-> when we click proceed to checkout we pass on all the items in basket to stripe and then stripe returns to us a checkout session 
+
+2-> finally redirect our user to that session
+
+3-> User than fills all his details like address, card no, etc. So this payment can either succeed or it may be failed
+
+4-> If payment stuff is done finally redirect user again on our shopping page
+
+5->Whenever stripe completes a payment or a payment suceeds then it fire's off bunch of events into something called as webhook
+
+6-> Now this webhook contains some information that we might be needing in future
+
+7-> So that information about a specific payment which was recently succeeded can be pushed to a remote DB.
+
+8-> after user fills in card details, and after hitting proceed for payment trigger a webhook that will push all order related stuff in db and then redirect to '/success' page
